@@ -1,6 +1,4 @@
-from xml.dom import minidom
-import xml.etree.ElementTree as ET
-
+from funcs import *
 
 pnml = ET.Element('pnml')
 pnml.set('xmlns', "http://www.pnml.org/version-2009/grammar/pnml")
@@ -16,11 +14,7 @@ page = ET.SubElement(net, 'page')
 page.set('id', 'g-1FF8-F43F-1')
 
 
-p = ET.SubElement(page, 'place')
-p.set('id', 'p-0')
-n = ET.SubElement(p, 'name')
-text1 = ET.SubElement(n, 'text')
-text1.text = 'p0'
+p = add_place(page, 0)
 marking = ET.SubElement(p, 'initialMarking')
 text1 = ET.SubElement(marking, 'text')
 text1.text = '1'
@@ -29,53 +23,50 @@ c = 0
 arc_c = 0
 
 for i in range(20):
+    add_transition(page, c)
+    add_place(page, c + 1)
 
-    t = ET.SubElement(page, 'transition')
-    t.set('id', 't-' + str(c))
-    n = ET.SubElement(t, 'name')
-    text1 = ET.SubElement(n, 'text')
-    text1.text = 't' + str(c)
-
-    p = ET.SubElement(page, 'place')
-    p.set('id', 'p-' + str(c + 1))
-    n = ET.SubElement(p, 'name')
-    text1 = ET.SubElement(n, 'text')
-    text1.text = 'p' + str(c + 1)
-
-    a = ET.SubElement(page, 'arc')
-    a.set('id', 'a-' + str(arc_c))
+    add_arc(page, arc_c, 't-' + str(c), 'p-' + str(c))
     arc_c += 1
-    a.set('source', 't-' + str(c))
-    a.set('target', 'p-' + str(c))
-
-    a = ET.SubElement(page, 'arc')
-    a.set('id', 'a-' + str(arc_c))
+    add_arc(page, arc_c, 'p-' + str(c + 1), 't-' + str(c))
     arc_c += 1
-    a.set('source', 'p-' + str(c + 1))
-    a.set('target', 't-' + str(c))
 
     c += 1
 
-t = ET.SubElement(page, 'transition')
-t.set('id', 't-' + str(c))
-n = ET.SubElement(t, 'name')
-text1 = ET.SubElement(n, 'text')
-text1.text = 't' + str(c)
+add_transition(page, c)
 
-a = ET.SubElement(page, 'arc')
-a.set('id', 'a-' + str(arc_c))
+add_arc(page, arc_c, 'p-0', 't-' + str(c))
 arc_c += 1
-a.set('source', 'p-0')
-a.set('target', 't-' + str(c))
-
-a = ET.SubElement(page, 'arc')
-a.set('id', 'a-' + str(arc_c))
+add_arc(page, arc_c, 't-' + str(c), 'p-' + str(c))
 arc_c += 1
-a.set('source', 't-' + str(c))
-a.set('target', 'p-' + str(c))
 
+c += 1
+center_id = c
+add_place(page, center_id)
+add_arc(page, arc_c, 't-0', 'p-' + str(center_id))
+arc_c += 1
+add_transition(page, c)
+add_arc(page, arc_c, 'p-' + str(center_id), 't-' + str(center_id))
+arc_c += 1
+c += 1
 
+with_marking = c
+p = add_place(page, with_marking)
+marking = ET.SubElement(p, 'initialMarking')
+text1 = ET.SubElement(marking, 'text')
+text1.text = '1'
 
+add_arc(page, arc_c, 'p-' + str(c), 't-' + str(center_id))
+arc_c += 1
+c += 1
+add_place(page, c)
+add_arc(page, arc_c, 't-' + str(center_id), 'p-' + str(c))
+arc_c += 1
+add_transition(page, c)
+add_arc(page, arc_c, 'p-' + str(c), 't-' + str(c))
+arc_c += 1
+
+add_arc(page, arc_c, 't-' + str(c), 'p-' + str(with_marking))
 
 
 # create a new XML file with the results

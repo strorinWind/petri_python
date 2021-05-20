@@ -1,0 +1,121 @@
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+ <net id="n-33DC-342AC-0" type ="http://www.pnml.org/version-2009/grammar/ptnet">
+  <name>
+   <text>3</text>
+  </name>
+ <page id="g-33DC-3482C-1">
+  <place id="p-33DC-34B24-2">
+  <name>
+   <text>p0</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="95" y="115"/>
+   </graphics>
+  </place>
+  <place id="p-33DC-34B5F-3">
+  <name>
+   <text>p1</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="250" y="185"/>
+   </graphics>
+  </place>
+  <place id="p-33DC-34B6A-4">
+  <name>
+   <text>p2</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="260" y="60"/>
+   </graphics>
+  </place>
+  <transition id="t-33DC-34B6D-5">
+  <name>
+   <text>t0</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="25" y="120"/>
+   </graphics>
+  </transition>
+  <transition id="t-33DC-34B71-6">
+  <name>
+   <text>t1</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="145" y="180"/>
+   </graphics>
+  </transition>
+  <transition id="t-33DC-34B76-7">
+  <name>
+   <text>t2</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="140" y="50"/>
+   </graphics>
+  </transition>
+  <transition id="t-33DC-34B78-8">
+  <name>
+   <text>t3</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="330" y="115"/>
+   </graphics>
+  </transition>
+  <transition id="t-33DC-34B7C-9">
+  <name>
+   <text>t4</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="30" y="25"/>
+   </graphics>
+  </transition>
+  <arc id="e-33DC-34B7E-10" source="p-33DC-34B24-2" target="t-33DC-34B7C-9">
+  </arc>
+  <arc id="e-33DC-34B90-11" source="p-33DC-34B24-2" target="t-33DC-34B76-7">
+  </arc>
+  <arc id="e-33DC-34B92-12" source="t-33DC-34B76-7" target="p-33DC-34B6A-4">
+  </arc>
+  <arc id="e-33DC-34B94-13" source="t-33DC-34B78-8" target="p-33DC-34B6A-4">
+  </arc>
+  <arc id="e-33DC-34B95-14" source="t-33DC-34B78-8" target="p-33DC-34B24-2">
+   <inscription>
+    <text>2</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+   </inscription>
+  </arc>
+  <arc id="e-33DC-34B97-15" source="p-33DC-34B5F-3" target="t-33DC-34B78-8">
+  </arc>
+  <arc id="e-33DC-34B98-16" source="t-33DC-34B71-6" target="p-33DC-34B5F-3">
+  </arc>
+  <arc id="e-33DC-34B99-17" source="p-33DC-34B24-2" target="t-33DC-34B71-6">
+  </arc>
+  <arc id="e-33DC-34B99-18" source="t-33DC-34B6D-5" target="p-33DC-34B24-2">
+  </arc>
+ </page>
+ </net>
+</pnml>

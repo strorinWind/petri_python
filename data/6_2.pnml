@@ -1,0 +1,87 @@
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+ <net id="n-3050-B97B1-0" type ="http://www.pnml.org/version-2009/grammar/ptnet">
+  <name>
+   <text>6_2</text>
+  </name>
+ <page id="g-3050-B9813-1">
+  <place id="p-3050-B982F-2">
+  <name>
+   <text>p0</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="105" y="110"/>
+   </graphics>
+  </place>
+  <place id="p-3050-B9878-3">
+  <name>
+   <text>p1</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="260" y="185"/>
+   </graphics>
+  </place>
+  <transition id="t-3050-B9889-4">
+  <name>
+   <text>t0</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="25" y="115"/>
+   </graphics>
+  </transition>
+  <transition id="t-3050-B989A-5">
+  <name>
+   <text>t1</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="140" y="205"/>
+   </graphics>
+  </transition>
+  <transition id="t-3050-B98A2-6">
+  <name>
+   <text>t2</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="300" y="125"/>
+   </graphics>
+  </transition>
+  <transition id="t-3050-B98A9-7">
+  <name>
+   <text>t3</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="75" y="25"/>
+   </graphics>
+  </transition>
+  <arc id="e-3050-B98B7-8" source="p-3050-B982F-2" target="t-3050-B98A9-7">
+  </arc>
+  <arc id="e-3050-B98CB-9" source="t-3050-B98A2-6" target="p-3050-B982F-2">
+  </arc>
+  <arc id="e-3050-B98D0-10" source="p-3050-B9878-3" target="t-3050-B98A2-6">
+  </arc>
+  <arc id="e-3050-B98D4-11" source="t-3050-B989A-5" target="p-3050-B9878-3">
+  </arc>
+  <arc id="e-3050-B98D7-12" source="p-3050-B982F-2" target="t-3050-B989A-5">
+  </arc>
+  <arc id="e-3050-B98DB-13" source="t-3050-B9889-4" target="p-3050-B982F-2">
+  </arc>
+ </page>
+ </net>
+</pnml>

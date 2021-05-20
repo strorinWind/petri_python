@@ -1,0 +1,115 @@
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+ <net id="n-2354-B6E4E-0" type ="http://www.pnml.org/version-2009/grammar/ptnet">
+  <name>
+   <text>9</text>
+  </name>
+ <page id="g-2354-B6E71-1">
+  <place id="p-2354-B6E7B-2">
+  <name>
+   <text>p0</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="120" y="105"/>
+   </graphics>
+  </place>
+  <place id="p-2354-B6E94-3">
+  <name>
+   <text>p1</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="335" y="50"/>
+   </graphics>
+  </place>
+  <place id="p-2354-B6E9D-4">
+  <name>
+   <text>p2</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="340" y="160"/>
+   </graphics>
+  </place>
+  <transition id="t-2354-B6E9F-5">
+  <name>
+   <text>t0</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="25" y="125"/>
+   </graphics>
+  </transition>
+  <transition id="t-2354-B6EA4-6">
+  <name>
+   <text>t1</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="120" y="30"/>
+   </graphics>
+  </transition>
+  <transition id="t-2354-B6EA9-7">
+  <name>
+   <text>t2</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="185" y="45"/>
+   </graphics>
+  </transition>
+  <transition id="t-2354-B6EAC-8">
+  <name>
+   <text>t3</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="180" y="155"/>
+   </graphics>
+  </transition>
+  <transition id="t-2354-B6EB1-9">
+  <name>
+   <text>t4</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="435" y="100"/>
+   </graphics>
+  </transition>
+  <arc id="e-2354-B6EB4-10" source="t-2354-B6EB1-9" target="p-2354-B6E7B-2">
+  </arc>
+  <arc id="e-2354-B6EBB-11" source="t-2354-B6EA9-7" target="p-2354-B6E94-3">
+  </arc>
+  <arc id="e-2354-B6EBD-12" source="p-2354-B6E94-3" target="t-2354-B6EB1-9">
+  </arc>
+  <arc id="e-2354-B6EC1-13" source="p-2354-B6E9D-4" target="t-2354-B6EB1-9">
+  </arc>
+  <arc id="e-2354-B6EC2-14" source="t-2354-B6EAC-8" target="p-2354-B6E9D-4">
+  </arc>
+  <arc id="e-2354-B6EC4-15" source="p-2354-B6E7B-2" target="t-2354-B6EAC-8">
+  </arc>
+  <arc id="e-2354-B6EC5-16" source="p-2354-B6E7B-2" target="t-2354-B6EA9-7">
+  </arc>
+  <arc id="e-2354-B6EC6-17" source="p-2354-B6E7B-2" target="t-2354-B6EA4-6">
+  </arc>
+  <arc id="e-2354-B6EC8-18" source="t-2354-B6E9F-5" target="p-2354-B6E7B-2">
+  </arc>
+ </page>
+ </net>
+</pnml>

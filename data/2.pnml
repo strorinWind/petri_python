@@ -1,0 +1,91 @@
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+ <net id="n-37EC-A684E-0" type ="http://www.pnml.org/version-2009/grammar/ptnet">
+  <name>
+   <text>2</text>
+  </name>
+ <page id="g-37EC-A68A8-1">
+  <place id="p-37EC-A68C1-2">
+  <name>
+   <text>p0</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <initialMarking>
+    <text>2</text>
+   </initialMarking>
+   <graphics>
+    <position x="95" y="100"/>
+   </graphics>
+  </place>
+  <place id="p-37EC-A6903-3">
+  <name>
+   <text>p1</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <initialMarking>
+    <text>1</text>
+   </initialMarking>
+   <graphics>
+    <position x="250" y="105"/>
+   </graphics>
+  </place>
+  <transition id="t-37EC-A691A-4">
+  <name>
+   <text>t0</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="290" y="25"/>
+   </graphics>
+  </transition>
+  <transition id="t-37EC-A6926-5">
+  <name>
+   <text>t1</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="25" y="190"/>
+   </graphics>
+  </transition>
+  <transition id="t-37EC-A6933-6">
+  <name>
+   <text>t2</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="165" y="195"/>
+   </graphics>
+  </transition>
+  <transition id="t-37EC-A693A-7">
+  <name>
+   <text>t3</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="280" y="190"/>
+   </graphics>
+  </transition>
+  <arc id="e-37EC-A6942-8" source="t-37EC-A691A-4" target="p-37EC-A6903-3">
+  </arc>
+  <arc id="e-37EC-A696A-9" source="p-37EC-A6903-3" target="t-37EC-A693A-7">
+  </arc>
+  <arc id="e-37EC-A6971-10" source="p-37EC-A6903-3" target="t-37EC-A6933-6">
+  </arc>
+  <arc id="e-37EC-A6976-11" source="p-37EC-A68C1-2" target="t-37EC-A6933-6">
+  </arc>
+  <arc id="e-37EC-A697A-12" source="p-37EC-A68C1-2" target="t-37EC-A6926-5">
+  </arc>
+ </page>
+ </net>
+</pnml>

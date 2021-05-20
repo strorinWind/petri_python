@@ -1,0 +1,46 @@
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+ <net id="n-339C-701E0-0" type ="http://www.pnml.org/version-2009/grammar/ptnet">
+  <name>
+   <text>simple</text>
+  </name>
+ <page id="g-339C-70214-1">
+  <place id="p-339C-7021D-2">
+  <name>
+   <text>p0</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="210" y="50"/>
+   </graphics>
+  </place>
+  <transition id="t-339C-70233-3">
+  <name>
+   <text>t0</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="360" y="50"/>
+   </graphics>
+  </transition>
+  <transition id="t-339C-7023C-4">
+  <name>
+   <text>t1</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="25" y="40"/>
+   </graphics>
+  </transition>
+  <arc id="e-339C-7023E-5" source="p-339C-7021D-2" target="t-339C-7023C-4">
+  </arc>
+  <arc id="e-339C-70245-6" source="t-339C-70233-3" target="p-339C-7021D-2">
+  </arc>
+ </page>
+ </net>
+</pnml>

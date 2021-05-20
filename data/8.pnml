@@ -1,0 +1,118 @@
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+ <net id="n-1DA0-AFA1B-0" type ="http://www.pnml.org/version-2009/grammar/ptnet">
+  <name>
+   <text>8</text>
+  </name>
+ <page id="g-1DA0-AFA75-1">
+  <place id="p-1DA0-AFA8E-2">
+  <name>
+   <text>p0</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <initialMarking>
+    <text>1</text>
+   </initialMarking>
+   <graphics>
+    <position x="135" y="70"/>
+   </graphics>
+  </place>
+  <place id="p-1DA0-AFAD4-3">
+  <name>
+   <text>p1</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <initialMarking>
+    <text>1</text>
+   </initialMarking>
+   <graphics>
+    <position x="320" y="75"/>
+   </graphics>
+  </place>
+  <transition id="t-1DA0-AFAE6-4">
+  <name>
+   <text>t0</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="25" y="65"/>
+   </graphics>
+  </transition>
+  <transition id="t-1DA0-AFAF1-5">
+  <name>
+   <text>t1</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="235" y="75"/>
+   </graphics>
+  </transition>
+  <transition id="t-1DA0-AFAFE-6">
+  <name>
+   <text>t2</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="440" y="70"/>
+   </graphics>
+  </transition>
+  <arc id="e-1DA0-AFB06-7" source="t-1DA0-AFAFE-6" target="p-1DA0-AFAD4-3">
+   <inscription>
+    <text>3</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+   </inscription>
+   <graphics>
+    <position x="417" y="24" />
+    <position x="354" y="24" />
+   </graphics>  </arc>
+  <arc id="e-1DA0-AFB45-8" source="p-1DA0-AFAD4-3" target="t-1DA0-AFAFE-6">
+   <graphics>
+    <position x="338" y="126" />
+    <position x="423" y="127" />
+   </graphics>  </arc>
+  <arc id="e-1DA0-AFB59-9" source="p-1DA0-AFAD4-3" target="t-1DA0-AFAF1-5">
+   <inscription>
+    <text>2</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+   </inscription>
+  </arc>
+  <arc id="e-1DA0-AFB60-10" source="p-1DA0-AFA8E-2" target="t-1DA0-AFAF1-5">
+   <inscription>
+    <text>2</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+   </inscription>
+  </arc>
+  <arc id="e-1DA0-AFB66-11" source="p-1DA0-AFA8E-2" target="t-1DA0-AFAE6-4">
+   <graphics>
+    <position x="105" y="26" />
+    <position x="46" y="38" />
+   </graphics>  </arc>
+  <arc id="e-1DA0-AFB74-12" source="t-1DA0-AFAE6-4" target="p-1DA0-AFA8E-2">
+   <inscription>
+    <text>3</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+   </inscription>
+   <graphics>
+    <position x="51" y="107" />
+    <position x="111" y="111" />
+   </graphics>  </arc>
+ </page>
+ </net>
+</pnml>

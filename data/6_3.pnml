@@ -1,0 +1,93 @@
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+ <net id="n-2554-91FEF-0" type ="http://www.pnml.org/version-2009/grammar/ptnet">
+  <name>
+   <text>6_3</text>
+  </name>
+ <page id="g-2554-92042-1">
+  <place id="p-2554-92059-2">
+  <name>
+   <text>p0</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="105" y="110"/>
+   </graphics>
+  </place>
+  <place id="p-2554-92099-3">
+  <name>
+   <text>p1</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="260" y="185"/>
+   </graphics>
+  </place>
+  <transition id="t-2554-920A8-4">
+  <name>
+   <text>t0</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="25" y="115"/>
+   </graphics>
+  </transition>
+  <transition id="t-2554-920B7-5">
+  <name>
+   <text>t1</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="140" y="205"/>
+   </graphics>
+  </transition>
+  <transition id="t-2554-920BE-6">
+  <name>
+   <text>t2</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="300" y="125"/>
+   </graphics>
+  </transition>
+  <transition id="t-2554-920C4-7">
+  <name>
+   <text>t3</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="75" y="25"/>
+   </graphics>
+  </transition>
+  <arc id="e-2554-920D1-8" source="p-2554-92059-2" target="t-2554-920C4-7">
+  </arc>
+  <arc id="e-2554-920FA-9" source="t-2554-920BE-6" target="p-2554-92059-2">
+   <inscription>
+    <text>2</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+   </inscription>
+  </arc>
+  <arc id="e-2554-92101-10" source="p-2554-92099-3" target="t-2554-920BE-6">
+  </arc>
+  <arc id="e-2554-92105-11" source="t-2554-920B7-5" target="p-2554-92099-3">
+  </arc>
+  <arc id="e-2554-92108-12" source="p-2554-92059-2" target="t-2554-920B7-5">
+  </arc>
+  <arc id="e-2554-92111-13" source="t-2554-920A8-4" target="p-2554-92059-2">
+  </arc>
+ </page>
+ </net>
+</pnml>

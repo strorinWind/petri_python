@@ -1,0 +1,64 @@
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+ <net id="n-3C98-F2EDC-0" type ="http://www.pnml.org/version-2009/grammar/ptnet">
+  <name>
+   <text>cycle</text>
+  </name>
+ <page id="g-3C98-F34FA-1">
+  <place id="p-3C98-F352A-2">
+  <name>
+   <text>p0</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <initialMarking>
+    <text>1</text>
+   </initialMarking>
+   <graphics>
+    <position x="30" y="110"/>
+   </graphics>
+  </place>
+  <place id="p-3C98-F35A3-3">
+  <name>
+   <text>p1</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="225" y="145"/>
+   </graphics>
+  </place>
+  <transition id="t-3C98-F35B4-4">
+  <name>
+   <text>t0</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="200" y="25"/>
+   </graphics>
+  </transition>
+  <transition id="t-3C98-F35C4-5">
+  <name>
+   <text>t1</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="130" y="205"/>
+   </graphics>
+  </transition>
+  <arc id="e-3C98-F35CD-6" source="p-3C98-F35A3-3" target="t-3C98-F35B4-4">
+  </arc>
+  <arc id="e-3C98-F35ED-7" source="t-3C98-F35C4-5" target="p-3C98-F35A3-3">
+  </arc>
+  <arc id="e-3C98-F35F1-8" source="p-3C98-F352A-2" target="t-3C98-F35C4-5">
+  </arc>
+  <arc id="e-3C98-F35F5-9" source="t-3C98-F35B4-4" target="p-3C98-F352A-2">
+  </arc>
+ </page>
+ </net>
+</pnml>

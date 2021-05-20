@@ -1,0 +1,83 @@
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+ <net id="n-43C4-91E43-0" type ="http://www.pnml.org/version-2009/grammar/ptnet">
+  <name>
+   <text>2_buffers</text>
+  </name>
+ <page id="g-43C4-91E7B-1">
+  <place id="p-43C4-91E88-2">
+  <name>
+   <text>p0</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="105" y="50"/>
+   </graphics>
+  </place>
+  <place id="p-43C4-91EAD-3">
+  <name>
+   <text>p1</text>
+    <graphics>
+     <offset x="0" y="-10" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="135" y="135"/>
+   </graphics>
+  </place>
+  <transition id="t-43C4-91EBA-4">
+  <name>
+   <text>t0</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="250" y="60"/>
+   </graphics>
+  </transition>
+  <transition id="t-43C4-91EC0-5">
+  <name>
+   <text>t1</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="25" y="55"/>
+   </graphics>
+  </transition>
+  <transition id="t-43C4-91EC4-6">
+  <name>
+   <text>t2</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="235" y="135"/>
+   </graphics>
+  </transition>
+  <transition id="t-43C4-91ECC-7">
+  <name>
+   <text>t3</text>
+    <graphics>
+     <offset x="0" y="0" />
+    </graphics>
+  </name>
+   <graphics>
+    <position x="55" y="145"/>
+   </graphics>
+  </transition>
+  <arc id="e-43C4-91ED0-8" source="p-43C4-91EAD-3" target="t-43C4-91EC4-6">
+  </arc>
+  <arc id="e-43C4-91EDB-9" source="t-43C4-91ECC-7" target="p-43C4-91EAD-3">
+  </arc>
+  <arc id="e-43C4-91EE1-10" source="p-43C4-91E88-2" target="t-43C4-91EBA-4">
+  </arc>
+  <arc id="e-43C4-91EE3-11" source="t-43C4-91EC0-5" target="p-43C4-91E88-2">
+  </arc>
+ </page>
+ </net>
+</pnml>
